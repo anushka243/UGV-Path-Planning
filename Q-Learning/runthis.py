@@ -5,7 +5,7 @@ Black rectangles:       hells       [reward = 5].
 Yellow bin circle:      paradise    [reward = 10 + x*5 where x is the number of users].
 All other states:       ground      [reward = -1].
 This script is the environment part of this example. The RL is in RL_brain.py.
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
+
 """
 
 from env import Maze
@@ -13,7 +13,8 @@ from RL_brain import QLearningTable
 
 
 def update():
-    for episode in range(20):
+    # training
+    for episode in range(10):
         # initial observation
         observation = env.reset()
 
@@ -58,6 +59,9 @@ def update():
         # RL take action and get next observation and reward
         observation_, reward, done = env.step(action)
 
+        # RL learn from this transition
+        RL.learn(str(observation), action, reward, str(observation_))
+
         # swap observation
         final.append(str(observation))
 
@@ -71,7 +75,7 @@ def update():
             env._save()
             break
 
-    #print(len(final))
+    print(len(final))
     Energy = ((len(final)*2)/2)*(0.29 + 0.74*2)
     print(Energy)
     env.destroy()

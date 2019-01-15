@@ -5,7 +5,6 @@ Black rectangles:       hells       [reward = 10].
 Yellow bin circle:      paradise    [reward = 5 + x*3 where x is the number of users].
 All other states:       ground      [reward = -1].
 This script is the environment part of this example. The RL is in RL_brain.py.
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
 """
 
 import numpy as np
@@ -112,7 +111,7 @@ class Maze(tk.Tk, object):
 
     def reset(self):
         self.update()
-        time.sleep(0.5)
+        time.sleep(0.1)
         self.canvas.delete(self.rect)
         origin = np.array([20, 20])
         self.iot1 = 0
@@ -147,7 +146,7 @@ class Maze(tk.Tk, object):
 
         # reward function
         if s_ == self.canvas.coords(self.oval):
-            reward = 5 + self.iot1 *3 + self.iot2 *3 + self.iot3 *3
+            reward = 15 + self.iot1 *5 + self.iot2 *5 + self.iot3 *5
             done = True
             s_ = 'terminal'
         elif (s_ == self.canvas.coords(self.hell11) or s_ == self.canvas.coords(self.hell12) or s_ == self.canvas.coords(self.hell13)) and self.iot1 == 0:
@@ -162,8 +161,6 @@ class Maze(tk.Tk, object):
             reward = 10
             self.iot3 = 1
             done = False
-            #done = True
-            #s_ = 'terminal'
         else:
             reward = -1
             done = False
@@ -171,7 +168,7 @@ class Maze(tk.Tk, object):
         return s_, reward, done
 
     def render(self):
-        time.sleep(0.1)
+        time.sleep(0.001)
         self.update()
 
     def _create_line(self, x,y):
@@ -184,7 +181,6 @@ class Maze(tk.Tk, object):
 
     def _save(self):
         self.canvas.postscript(file="map.ps", colormode='color')
-    #def _harvest_power(self):
 
 
 
