@@ -86,6 +86,7 @@ class Maze(tk.Tk, object):
 
         # pack all
         self.canvas.pack()
+        self.canvas.postscript(file="map.ps", colormode='color')
 
     def reset(self):
         self.update()
@@ -158,6 +159,9 @@ class Maze(tk.Tk, object):
             x2 = (y[0] + y[2])/2
             y2 = (y[1] + y[3])/2
             self.canvas.create_line(x1, y1, x2, y2, fill='red')
+
+    def _save(self):
+        self.canvas.postscript(file="map.ps", colormode='color')
     #def _harvest_power(self):
 
 

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f4bf725-6d0d-42b3-adef-171797dc7fee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Q-Learning/RL_brain.py" beforeDir="false" afterPath="$PROJECT_DIR$/Q-Learning/RL_brain.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Q-Learning/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Q-Learning/env.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Q-Learning/runthis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Q-Learning/runthis.py" afterDir="false" />
     </list>
@@ -19,23 +18,23 @@
     <session id="957375472">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="336" />
+          <entry key="py" value="420" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="336" />
+          <entry key="Python" value="420" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q-Learning/env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
+            <state relative-caret-position="247">
+              <caret line="163" column="42" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -49,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Q-Learning/runthis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-59">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="371">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
@@ -79,8 +78,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="163" />
-    <option name="y" value="32" />
+    <option name="x" value="393" />
+    <option name="y" value="58" />
     <option name="width" value="1400" />
     <option name="height" value="768" />
   </component>
@@ -164,7 +163,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="163" y="32" width="1400" height="768" extended-state="0" />
+    <frame x="393" y="58" width="1400" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17452136" />
@@ -197,13 +196,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Q-Learning/runthis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Q-Learning/RL_brain.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -213,8 +205,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Q-Learning/env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
+        <state relative-caret-position="247">
+          <caret line="163" column="42" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q-Learning/runthis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>

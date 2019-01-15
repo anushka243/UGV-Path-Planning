@@ -61,12 +61,14 @@ def update():
         env._create_line(observation, observation_)
 
         observation = observation_
+        env._save()
 
         # break while loop when end of this episode
         if done:
             break
     # for x in range(len(final)):
     #     print(final[x]),
+
     env.destroy()
 
 
