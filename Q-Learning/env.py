@@ -52,24 +52,46 @@ class Maze(tk.Tk, object):
         # create origin
         origin = np.array([20, 20])
 
-        # hell
-        hell1_center = origin + np.array([UNIT * 2, UNIT])
-        self.hell1 = self.canvas.create_rectangle(
-            hell1_center[0] - 15, hell1_center[1] - 15,
-            hell1_center[0] + 15, hell1_center[1] + 15,
+        # hell 3
+        hell31_center = origin + np.array([UNIT * 3, UNIT*2])
+        self.hell31 = self.canvas.create_rectangle(
+            hell31_center[0] - 15, hell31_center[1] - 15,
+            hell31_center[0] + 15, hell31_center[1] + 15,
             fill='black')
-        # hell
-        hell2_center = origin + np.array([UNIT*4, UNIT * 2])
-        self.hell2 = self.canvas.create_rectangle(
-            hell2_center[0] - 15, hell2_center[1] - 15,
-            hell2_center[0] + 15, hell2_center[1] + 15,
+        hell32_center = origin + np.array([UNIT * 3, UNIT * 3])
+        self.hell32 = self.canvas.create_rectangle(
+            hell32_center[0] - 15, hell32_center[1] - 15,
+            hell32_center[0] + 15, hell32_center[1] + 15,
             fill='black')
-        # hell
-        hell3_center = origin + np.array([UNIT*3, UNIT * 5])
-        self.hell3 = self.canvas.create_rectangle(
-            hell3_center[0] - 15, hell3_center[1] - 15,
-            hell3_center[0] + 15, hell3_center[1] + 15,
-            fill='black')
+
+        # hell 2
+        hell21_center = origin + np.array([UNIT*1, UNIT * 6])
+        self.hell21 = self.canvas.create_rectangle(
+            hell21_center[0] - 15, hell21_center[1] - 15,
+            hell21_center[0] + 15, hell21_center[1] + 15,
+            fill='blue')
+        hell22_center = origin + np.array([UNIT * 2, UNIT * 6])
+        self.hell22 = self.canvas.create_rectangle(
+            hell22_center[0] - 15, hell22_center[1] - 15,
+            hell22_center[0] + 15, hell22_center[1] + 15,
+            fill='blue')
+
+        # hell 1
+        hell11_center = origin + np.array([UNIT*1, UNIT * 4])
+        self.hell11 = self.canvas.create_rectangle(
+            hell11_center[0] - 15, hell11_center[1] - 15,
+            hell11_center[0] + 15, hell11_center[1] + 15,
+            fill='red')
+        hell12_center = origin + np.array([UNIT * 1, UNIT * 5])
+        self.hell12 = self.canvas.create_rectangle(
+            hell12_center[0] - 15, hell12_center[1] - 15,
+            hell12_center[0] + 15, hell12_center[1] + 15,
+            fill='red')
+        hell13_center = origin + np.array([UNIT * 2, UNIT * 5])
+        self.hell13 = self.canvas.create_rectangle(
+            hell13_center[0] - 15, hell13_center[1] - 15,
+            hell13_center[0] + 15, hell13_center[1] + 15,
+            fill='red')
 
         # create oval
         oval_center = origin + np.array([UNIT * 7, UNIT * 7])
@@ -82,7 +104,7 @@ class Maze(tk.Tk, object):
         self.rect = self.canvas.create_rectangle(
             origin[0] - 15, origin[1] - 15,
             origin[0] + 15, origin[1] + 15,
-            fill='red')
+            fill='gray')
 
         # pack all
         self.canvas.pack()
@@ -99,7 +121,7 @@ class Maze(tk.Tk, object):
         self.rect = self.canvas.create_rectangle(
             origin[0] - 15, origin[1] - 15,
             origin[0] + 15, origin[1] + 15,
-            fill='red')
+            fill='gray')
         # return observation
         return self.canvas.coords(self.rect)
 
@@ -128,15 +150,15 @@ class Maze(tk.Tk, object):
             reward = 5 + self.iot1 *3 + self.iot2 *3 + self.iot3 *3
             done = True
             s_ = 'terminal'
-        elif s_ == self.canvas.coords(self.hell1) and self.iot1 == 0:
+        elif (s_ == self.canvas.coords(self.hell11) or s_ == self.canvas.coords(self.hell12) or s_ == self.canvas.coords(self.hell13)) and self.iot1 == 0:
             reward = 10
             self.iot1 = 1
             done = False
-        elif s_ == self.canvas.coords(self.hell2) and self.iot2 == 0:
+        elif (s_ == self.canvas.coords(self.hell21) or s_ == self.canvas.coords(self.hell22)) and self.iot2 == 0:
             reward = 10
             self.iot2 = 1
             done = False
-        elif s_ == self.canvas.coords(self.hell3) and self.iot3 == 0:
+        elif (s_ == self.canvas.coords(self.hell31) or s_ == self.canvas.coords(self.hell32)) and self.iot3 == 0:
             reward = 10
             self.iot3 = 1
             done = False

@@ -66,8 +66,8 @@ def update():
         # break while loop when end of this episode
         if done:
             break
-    # for x in range(len(final)):
-    #     print(final[x]),
+
+    print(len(final))
 
     env.destroy()
 
