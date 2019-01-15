@@ -13,7 +13,7 @@ from RL_brain import QLearningTable
 
 
 def update():
-    for episode in range(1):
+    for episode in range(20):
         # initial observation
         observation = env.reset()
 
@@ -31,6 +31,9 @@ def update():
             RL.learn(str(observation), action, reward, str(observation_))
 
             # swap observation
+            #if episode == 20 :
+                #env._create_line(observation, observation_)
+                #env._save()
 
             observation = observation_
 
@@ -61,14 +64,16 @@ def update():
         env._create_line(observation, observation_)
 
         observation = observation_
-        env._save()
+        #env._save()
 
         # break while loop when end of this episode
         if done:
+            env._save()
             break
 
-    print(len(final))
-
+    #print(len(final))
+    Energy = ((len(final)*2)/2)*(0.29 + 0.74*2)
+    print(Energy)
     env.destroy()
 
 
