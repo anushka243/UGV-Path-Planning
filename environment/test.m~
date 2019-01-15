@@ -1,0 +1,2 @@
+load('map.mat')
+disp
