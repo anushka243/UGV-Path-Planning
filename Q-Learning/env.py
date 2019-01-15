@@ -18,8 +18,8 @@ else:
 
 
 UNIT = 40   # pixels
-MAZE_H = 10  # grid height
-MAZE_W = 10  # grid width
+MAZE_H = 8  # grid height
+MAZE_W = 8  # grid width
 
 class Maze(tk.Tk, object):
 
@@ -72,7 +72,7 @@ class Maze(tk.Tk, object):
             fill='black')
 
         # create oval
-        oval_center = origin + np.array([UNIT * 9, UNIT * 9])
+        oval_center = origin + np.array([UNIT * 7, UNIT * 7])
         self.oval = self.canvas.create_oval(
             oval_center[0] - 15, oval_center[1] - 15,
             oval_center[0] + 15, oval_center[1] + 15,
@@ -124,19 +124,19 @@ class Maze(tk.Tk, object):
 
         # reward function
         if s_ == self.canvas.coords(self.oval):
-            reward = 10 + self.iot1 *3 + self.iot2 *3 + self.iot3 *3
+            reward = 5 + self.iot1 *3 + self.iot2 *3 + self.iot3 *3
             done = True
             s_ = 'terminal'
         elif s_ == self.canvas.coords(self.hell1) and self.iot1 == 0:
-            reward = 5
+            reward = 10
             self.iot1 = 1
             done = False
         elif s_ == self.canvas.coords(self.hell2) and self.iot2 == 0:
-            reward = 5
+            reward = 10
             self.iot2 = 1
             done = False
         elif s_ == self.canvas.coords(self.hell3) and self.iot3 == 0:
-            reward = 5
+            reward = 10
             self.iot3 = 1
             done = False
             #done = True
@@ -151,7 +151,14 @@ class Maze(tk.Tk, object):
         time.sleep(0.1)
         self.update()
 
-    def _harvest_power(self):
+    def _create_line(self, x,y):
+        if y != 'terminal':
+            x1 = (x[0] + x[2])/2
+            y1 = (x[1] + x[3])/2
+            x2 = (y[0] + y[2])/2
+            y2 = (y[1] + y[3])/2
+            self.canvas.create_line(x1, y1, x2, y2, fill='red')
+    #def _harvest_power(self):
 
 
 
