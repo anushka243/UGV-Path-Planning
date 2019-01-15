@@ -146,7 +146,7 @@ class Maze(tk.Tk, object):
 
         # reward function
         if s_ == self.canvas.coords(self.oval):
-            reward = 15 + self.iot1 *5 + self.iot2 *5 + self.iot3 *5
+            reward = 10 + self.iot1 *5 + self.iot2 *5 + self.iot3 *5
             done = True
             s_ = 'terminal'
         elif (s_ == self.canvas.coords(self.hell11) or s_ == self.canvas.coords(self.hell12) or s_ == self.canvas.coords(self.hell13)) and self.iot1 == 0:
@@ -182,6 +182,16 @@ class Maze(tk.Tk, object):
     def _save(self):
         self.canvas.postscript(file="map.ps", colormode='color')
 
+    def _not_charged(self):
+        i = 0
+        if self.iot1 == 0 and self.iot2 == 0 and self.iot3 == 0:
+            return 3
+        elif (self.iot1 == 0 and self.iot2 == 0) or (self.iot1 == 0 and self.iot3 == 0) or (self.iot3 == 0 and self.iot2 == 0):
+            return 2
+        elif self.iot1 == 0 or self.iot2 == 0 or self.iot3 == 0:
+            return 1
+        else:
+            return 0
 
 
 def update():

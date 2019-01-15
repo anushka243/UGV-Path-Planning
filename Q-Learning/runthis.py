@@ -8,14 +8,20 @@ This script is the environment part of this example. The RL is in RL_brain.py.
 
 """
 
+import matplotlib
+matplotlib.use("TkAgg")
+from matplotlib import pyplot as plt
 from env import Maze
 from RL_brain import QLearningTable
 
 
 def update():
     # training
-    for episode in range(10):
+    total_paths = []
+    total_energy = []
+    for episode in range(100):
         # initial observation
+        current_path = []
         observation = env.reset()
 
         while True:
@@ -35,12 +41,16 @@ def update():
             #if episode == 20 :
                 #env._create_line(observation, observation_)
                 #env._save()
-
+            current_path.append(str(observation))
             observation = observation_
 
             # break while loop when end of this episode
             if done:
                 break
+
+        total_paths.append(len(current_path)+1)
+        #total_energy.append((((len(current_path) + 1) * 2) / 2) * (0.29 + 7.4 * 2))
+        total_energy.append(((((len(current_path)+1)*2)/2)*(0.29 + 7.4 * 2)) + 1 * env._not_charged())
 
     # end of game
     print('game over')
@@ -75,10 +85,26 @@ def update():
             env._save()
             break
 
-    print(len(final))
-    Energy = ((len(final)*2)/2)*(0.29 + 0.74*2)
-    print(Energy)
+    #print(len(final))
+
+    Energy = (((len(final)+1)*2)/2)*(0.29 + 7.4 * 2)
+    #print(Energy)
+    print(total_paths)
+    print(total_energy)
     env.destroy()
+    x = []
+    for i in range(100):
+        x.append(i)
+
+    minlp = []
+    for i in range(100):
+        minlp.append(241)
+
+    plt.plot(x, total_energy, 'b')
+    plt.plot(x, minlp, 'r')
+    plt.xlabel('Number of Epochs')
+    plt.ylabel('Moving Energy of UGV')
+    plt.show()
 
 
 if __name__ == "__main__":
