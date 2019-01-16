@@ -87,10 +87,10 @@ def update():
 
     #print(len(final))
 
-    Energy = (((len(final)+1)*2)/2)*(0.29 + 7.4 * 2)
+    #Energy = (((len(final)+1)*2)/2)*(0.29 + 7.4 * 2)
     #print(Energy)
-    print(total_paths)
-    print(total_energy)
+    #print(total_paths)
+    #print(total_energy)
     env.destroy()
     x = []
     for i in range(100):
