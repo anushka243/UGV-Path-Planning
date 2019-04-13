@@ -23,7 +23,7 @@ def run_maze():
     for episode in range(300):
         # initial observation
         current_path = []
-        observation = env.reset()
+        observation = env.reset_dq()
 
         while True:
             # fresh env
@@ -33,7 +33,7 @@ def run_maze():
             action = RL.choose_action(observation)
 
             # RL take action and get next observation and reward
-            observation_, reward, done = env.step(action)
+            observation_, reward, done = env.step_dq(action)
 
             #store in memory buffer
             RL.store_transition(observation, action, reward, observation_)
@@ -63,7 +63,7 @@ def run_maze():
 
     # running it after training
     final = []
-    observation = env.reset()
+    observation = env.reset_dq()
     while True:
         # fresh env
         env.render()
@@ -73,13 +73,13 @@ def run_maze():
         # action = RL.choose_action(str(observation))
 
         # RL take action and get next observation and reward
-        observation_, reward, done = env.step(action)
+        observation_, reward, done = env.step_dq(action)
 
         # swap observation
         final.append(str(observation))
 
         #create path
-        env._create_line(observation, observation_)
+        env._create_line_dq(observation, observation_)
         observation = observation_
 
         # break while loop when end of this episode

@@ -1,5 +1,5 @@
 """
-Reinforcement learning robot path planning for large grid.
+Reinforcement learning robot path planning for large grid (40x40).
 
 Red rectangle:          UGV.
 Black rectangles:       IoT regions (denoted by hell)     [reward = 5].
@@ -110,6 +110,22 @@ class Maze(tk.Tk, object):
         self.canvas.pack()
         self.canvas.postscript(file="map.ps", colormode='color')
 
+    def reset_dq(self):
+        self.update()
+        time.sleep(0.1)
+        self.canvas.delete(self.rect)
+        origin = np.array([10, 10])
+        self.iot1 = 0
+        self.iot2 = 0
+        self.iot3 = 0
+        self.rect = self.canvas.create_rectangle(
+            origin[0] - 5, origin[1] - 5,
+            origin[0] + 5, origin[1] + 5,
+            fill='gray')
+        # return observation
+        return (np.array(self.canvas.coords(self.rect)[:2]) - np.array(self.canvas.coords(self.oval)[:2])) / (
+                    MAZE_H * UNIT)
+
     def reset(self):
         self.update()
         time.sleep(0.1)
@@ -123,21 +139,21 @@ class Maze(tk.Tk, object):
             origin[0] + 5, origin[1] + 5,
             fill='gray')
         # return observation
-        return (np.array(self.canvas.coords(self.rect)[:2]) - np.array(self.canvas.coords(self.oval)[:2]))/(MAZE_H*UNIT)
+        return self.canvas.coords(self.rect)
 
-    def step(self, action):
+    def step_dq(self, action):
         s = self.canvas.coords(self.rect)
         base_action = np.array([0, 0])
-        if action == 0:   # up
+        if action == 0:  # up
             if s[1] > UNIT:
                 base_action[1] -= UNIT
-        elif action == 1:   # down
+        elif action == 1:  # down
             if s[1] < (MAZE_H - 1) * UNIT:
                 base_action[1] += UNIT
-        elif action == 2:   # right
+        elif action == 2:  # right
             if s[0] < (MAZE_W - 1) * UNIT:
                 base_action[0] += UNIT
-        elif action == 3:   # left
+        elif action == 3:  # left
             if s[0] > UNIT:
                 base_action[0] -= UNIT
 
@@ -145,33 +161,81 @@ class Maze(tk.Tk, object):
 
         next_coords = self.canvas.coords(self.rect)  # next state
 
-        # reward function
+        # reward function for goal, iots and ground
         if next_coords == self.canvas.coords(self.oval):
             reward = 10 + self.iot1 * 5 + self.iot2 * 5 + self.iot3 * 5
             done = True
-        elif (next_coords in [self.canvas.coords(self.hell11)]) or (next_coords in [self.canvas.coords(self.hell12)]) or (next_coords in [self.canvas.coords(self.hell13)]) and self.iot1 == 0:
+        elif (next_coords in [self.canvas.coords(self.hell11)]) or (
+                next_coords in [self.canvas.coords(self.hell12)]) or (
+                next_coords in [self.canvas.coords(self.hell13)]) and self.iot1 == 0:
             reward = 10
             self.iot1 = 1
             done = False
-        elif (next_coords in [self.canvas.coords(self.hell21)]) or (next_coords in [self.canvas.coords(self.hell22)]) and self.iot2 == 0:
+        elif (next_coords in [self.canvas.coords(self.hell21)]) or (
+                next_coords in [self.canvas.coords(self.hell22)]) and self.iot2 == 0:
             reward = 10
             self.iot2 = 1
             done = False
-        elif (next_coords in [self.canvas.coords(self.hell31)]) or (next_coords in [self.canvas.coords(self.hell32)]) and self.iot3 == 0:
+        elif (next_coords in [self.canvas.coords(self.hell31)]) or (
+                next_coords in [self.canvas.coords(self.hell32)]) and self.iot3 == 0:
             reward = 10
             self.iot3 = 1
             done = False
         else:
             reward = -1
             done = False
-        s_ = (np.array(next_coords[:2]) - np.array(self.canvas.coords(self.oval)[:2]))/(MAZE_H*UNIT)
+        s_ = (np.array(next_coords[:2]) - np.array(self.canvas.coords(self.oval)[:2])) / (MAZE_H * UNIT)
+        return s_, reward, done
+
+    def step(self, action):
+        s = self.canvas.coords(self.rect)
+        base_action = np.array([0, 0])
+        if action == 0:  # up
+            if s[1] > UNIT:
+                base_action[1] -= UNIT
+        elif action == 1:  # down
+            if s[1] < (MAZE_H - 1) * UNIT:
+                base_action[1] += UNIT
+        elif action == 2:  # right
+            if s[0] < (MAZE_W - 1) * UNIT:
+                base_action[0] += UNIT
+        elif action == 3:  # left
+            if s[0] > UNIT:
+                base_action[0] -= UNIT
+
+        self.canvas.move(self.rect, base_action[0], base_action[1])  # move agent
+
+        s_ = self.canvas.coords(self.rect)  # next state
+
+        # reward function
+        if s_ == self.canvas.coords(self.oval):
+            reward = 10 + self.iot1 * 5 + self.iot2 * 5 + self.iot3 * 5
+            done = True
+            s_ = 'terminal'
+        elif (s_ == self.canvas.coords(self.hell11) or s_ == self.canvas.coords(
+                self.hell12) or s_ == self.canvas.coords(self.hell13)) and self.iot1 == 0:
+            reward = 10
+            self.iot1 = 1
+            done = False
+        elif (s_ == self.canvas.coords(self.hell21) or s_ == self.canvas.coords(self.hell22)) and self.iot2 == 0:
+            reward = 10
+            self.iot2 = 1
+            done = False
+        elif (s_ == self.canvas.coords(self.hell31) or s_ == self.canvas.coords(self.hell32)) and self.iot3 == 0:
+            reward = 10
+            self.iot3 = 1
+            done = False
+        else:
+            reward = -1
+            done = False
+
         return s_, reward, done
 
     def render(self):
         # time.sleep(0.01)
         self.update()
 
-    def _create_line(self, x, y):
+    def _create_line_dq(self, x, y):
         xtemp = x* (MAZE_H * UNIT) + np.array(self.canvas.coords(self.oval)[:2])
         xtemp2 = np.array(xtemp) + np.array([6,6])
         xnn = np.concatenate((xtemp, xtemp2), axis=None)
@@ -185,6 +249,14 @@ class Maze(tk.Tk, object):
             y1 = (x[1] + x[3]) / 2
             x2 = (ynn[0] + ynn[2]) / 2
             y2 = (ynn[1] + ynn[3]) / 2
+            self.canvas.create_line(x1, y1, x2, y2, fill='red')
+
+    def _create_line(self, x, y):
+        if y != 'terminal':
+            x1 = (x[0] + x[2]) / 2
+            y1 = (x[1] + x[3]) / 2
+            x2 = (y[0] + y[2]) / 2
+            y2 = (y[1] + y[3]) / 2
             self.canvas.create_line(x1, y1, x2, y2, fill='red')
 
     def _save(self):

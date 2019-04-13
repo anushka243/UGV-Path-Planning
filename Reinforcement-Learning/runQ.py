@@ -11,7 +11,7 @@ This script is the environment part of this example. The RL is in RL_brain.py.
 import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
-from env import Maze
+from biggest_maze_env import Maze
 from QL_brain import QLearningTable
 
 

@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2f4bf725-6d0d-42b3-adef-171797dc7fee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DQN/.idea/5_Deep_Q_Network.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DQN/.idea/5_Deep_Q_Network.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DQN/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DQN/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DQN/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DQN/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DQN/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DQN/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q-Learning/map.ps" beforeDir="false" afterPath="$PROJECT_DIR$/Q-Learning/map.ps" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,10 +42,10 @@
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -66,41 +61,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q-Learning/env.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#348#366#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Q-Learning/runthis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Q-Learning/QL_brain.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-              <folding>
-                <element signature="e#116#134#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -145,11 +106,6 @@
             <path>
               <item name="UGV-Path-Planning" type="b2602c69:ProjectViewProjectNode" />
               <item name="UGV-Path-Planning" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UGV-Path-Planning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UGV-Path-Planning" type="462c0819:PsiDirectoryNode" />
-              <item name="Q-Learning" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -255,7 +211,7 @@
   <component name="ToolWindowManager">
     <frame x="17" y="23" width="1154" height="812" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22841726" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23201439" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -285,42 +241,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Q-Learning/RL_brain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding>
-            <element signature="e#116#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q-Learning/env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#348#366#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q-Learning/QL_brain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-          <folding>
-            <element signature="e#116#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q-Learning/runthis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Q-Learning/RL_brain.py" />
+    <entry file="file://$PROJECT_DIR$/Q-Learning/env.py" />
+    <entry file="file://$PROJECT_DIR$/Q-Learning/QL_brain.py" />
+    <entry file="file://$PROJECT_DIR$/Q-Learning/runthis.py" />
   </component>
 </project>
