@@ -12,7 +12,7 @@ import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
 from env import Maze
-from RL_brain import QLearningTable
+from QL_brain import QLearningTable
 
 
 def update():
@@ -37,10 +37,6 @@ def update():
             # RL learn from this transition
             RL.learn(str(observation), action, reward, str(observation_))
 
-            # swap observation
-            #if episode == 20 :
-                #env._create_line(observation, observation_)
-                #env._save()
             current_path.append(str(observation))
             observation = observation_
 
@@ -49,7 +45,6 @@ def update():
                 break
 
         total_paths.append(len(current_path)+1)
-        #total_energy.append((((len(current_path) + 1) * 2) / 2) * (0.29 + 7.4 * 2))
         total_energy.append(((((len(current_path)+1)*2)/2)*(0.29 + 7.4 * 2)) + 1 * env._not_charged())
 
     # end of game
@@ -70,7 +65,7 @@ def update():
         observation_, reward, done = env.step(action)
 
         # RL learn from this transition
-        RL.learn(str(observation), action, reward, str(observation_))
+        #RL.learn(str(observation), action, reward, str(observation_))
 
         # swap observation
         final.append(str(observation))
@@ -85,12 +80,6 @@ def update():
             env._save()
             break
 
-    #print(len(final))
-
-    #Energy = (((len(final)+1)*2)/2)*(0.29 + 7.4 * 2)
-    #print(Energy)
-    #print(total_paths)
-    #print(total_energy)
     env.destroy()
     x = []
     for i in range(100):
