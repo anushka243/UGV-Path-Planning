@@ -1,5 +1,6 @@
 """
 Reinforcement learning robot path planning for large grid (40x40).
+only applicable for Deep Q Learning
 
 Red rectangle:          UGV.
 Black rectangles:       IoT regions (denoted by hell)     [reward = 5].

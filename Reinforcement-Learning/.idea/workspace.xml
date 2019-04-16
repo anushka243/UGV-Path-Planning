@@ -2,48 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd3864dd-01fb-43ed-b9e6-8b6ed6eee102" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/.idea/5_Deep_Q_Network.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/.idea/other.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/40.ps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/DQN_modified.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/DQN_path.ps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/RL_brain.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/big_maze_env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/biggest_maze_env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555141576.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555141784.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555141802.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555142458.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555142503.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555142970.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555143007.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555143063.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555143280.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555168182.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555168194.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555169586.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555171602.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/logs/events.out.tfevents.1555174968.Anushkas-MacBook-Pro.local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/map.ps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/maze_env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/DQN/run_this.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/LICENCE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/.idea/Q.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/.idea/other.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/QL_brain.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/eureka.ps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/map.ps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reinforcement Learning/Q-Learning/runthis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DQN_large-path.ps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DQN_path.ps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/biggest_maze_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/biggest_maze_env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.ps" beforeDir="false" afterPath="$PROJECT_DIR$/map.ps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/maze_env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runDQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/runDQ.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/runQ.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,89 +58,39 @@
     <session id="2058670031">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="6" />
+          <entry key="pkl" value="3" />
+          <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="6" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="9" />
+          <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="10" />
+          <entry key="Python Console" value="13" />
+          <entry key="py" value="394" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="10" />
+          <entry key="Python" value="407" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL_brain.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2341">
-              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-              <folding>
-                <element signature="e#155#173#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/runDQ.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runQ.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/80x80.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QL_brain.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/maze_env.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/biggest_maze_env.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -190,6 +106,11 @@
       <find>rect</find>
       <find>origin</find>
       <find>reward</find>
+      <find>dq</find>
+      <find>reset</find>
+      <find>step</find>
+      <find>l2</find>
+      <find>_creat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -203,7 +124,11 @@
         <option value="$PROJECT_DIR$/runthis.py" />
         <option value="$PROJECT_DIR$/Upsilon.py" />
         <option value="$PROJECT_DIR$/env.py" />
+        <option value="$PROJECT_DIR$/maze_env.py" />
+        <option value="$PROJECT_DIR$/runQ.py" />
+        <option value="$PROJECT_DIR$/main_RL.py" />
         <option value="$PROJECT_DIR$/biggest_maze_env.py" />
+        <option value="$PROJECT_DIR$/runDQ.py" />
       </list>
     </option>
   </component>
@@ -213,11 +138,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="82" />
-    <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="768" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="606" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -241,6 +164,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -258,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.runDQ">
+  <component name="RunManager" selected="Python.main_RL">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Q" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -273,6 +197,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_RL" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Q" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/FYP_venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_RL.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -345,11 +288,13 @@
       <item itemvalue="Python.runthis" />
       <item itemvalue="Python.runQ" />
       <item itemvalue="Python.runDQ" />
+      <item itemvalue="Python.main_RL" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.runDQ" />
+        <item itemvalue="Python.main_RL" />
         <item itemvalue="Python.runQ" />
+        <item itemvalue="Python.runDQ" />
         <item itemvalue="Python.runthis" />
       </list>
     </recent_temporary>
@@ -368,11 +313,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="82" y="23" width="1400" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17820324" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.03576538" />
+      <window_info id="Structure" order="1" sideWeight="0.50120485" side_tool="true" weight="0.088652484" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988167" />
@@ -386,12 +330,12 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.16420119" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.10502958" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.37548637" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" x="0" y="0" width="300" height="568" id="Documentation" order="4" side_tool="true" visible="true" weight="0.055228278" />
+      <window_info anchor="right" x="0" y="0" width="300" height="568" id="Documentation" order="4" side_tool="true" visible="true" weight="0.007868383" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
@@ -406,7 +350,7 @@
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk/Tkinter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
-          <caret line="2323" column="8" selection-start-line="2323" selection-start-column="8" selection-end-line="2323" selection-end-column="8" />
+          <caret line="1122" column="8" selection-start-line="1122" selection-start-column="8" selection-end-line="1122" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -415,43 +359,82 @@
     <entry file="file://$PROJECT_DIR$/../../Morvan_Zhou/Reinforcement-learning-with-tensorflow/contents/2_Q_Learning_maze/maze_env.py" />
     <entry file="file://$PROJECT_DIR$/env.py" />
     <entry file="file://$PROJECT_DIR$/runthis.py" />
-    <entry file="file://$PROJECT_DIR$/RL_brain.py">
+    <entry file="file://$PROJECT_DIR$/80x80.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ql_total_path.pkl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dql_total_path.pkl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maze_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2341">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="48">
+          <caret line="237" column="8" selection-start-line="237" selection-start-column="8" selection-end-line="237" selection-end-column="8" />
           <folding>
-            <element signature="e#155#173#0" expanded="true" />
+            <element signature="e#487#505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runQ.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
+          <folding>
+            <element signature="e#349#366#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QL_brain.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maze_env.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runQ.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#116#134#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/80x80.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/main_RL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding>
+            <element signature="e#348#361#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/biggest_maze_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/runDQ.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        <state relative-caret-position="1080">
+          <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
+          <folding>
+            <element signature="e#349#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_brain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+          <folding>
+            <element signature="e#155#173#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

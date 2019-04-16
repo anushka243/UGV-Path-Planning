@@ -123,7 +123,7 @@ class Maze(tk.Tk, object):
             origin[0] - 15, origin[1] - 15,
             origin[0] + 15, origin[1] + 15,
             fill='gray')
-        # return observation
+         # return observation
         return (np.array(self.canvas.coords(self.rect)[:2]) - np.array(self.canvas.coords(self.oval)[:2]))/(MAZE_H*UNIT)
 
     def reset(self):
@@ -161,7 +161,7 @@ class Maze(tk.Tk, object):
 
         next_coords = self.canvas.coords(self.rect)  # next state
 
-        # reward function for goal, iots and ground
+         # reward function for goal, iots and ground
         if next_coords == self.canvas.coords(self.oval):
             reward = 10 + self.iot1 * 5 + self.iot2 * 5 + self.iot3 * 5
             done = True
@@ -231,10 +231,10 @@ class Maze(tk.Tk, object):
         # time.sleep(0.01)
         self.update()
 
-    # create path line
+     #create path line
     def _create_line_dq(self, x, y):
 
-        # transfomation of coordinates necessary for line creation
+    #     # transfomation of coordinates necessary for line creation
         xtemp = x* (MAZE_H * UNIT) + np.array(self.canvas.coords(self.oval)[:2])
         xtemp2 = np.array(xtemp) + np.array([30,30])
         xnn = np.concatenate((xtemp, xtemp2), axis=None)
@@ -244,13 +244,14 @@ class Maze(tk.Tk, object):
         ynn = np.concatenate((ytemp, ytemp2), axis=None)
         y=ynn
 
-        #main line
+         #main line
         if not(np.array_equal(y, self.canvas.coords(self.oval))):
             x1 = (x[0] + x[2]) / 2
             y1 = (x[1] + x[3]) / 2
             x2 = (ynn[0] + ynn[2]) / 2
             y2 = (ynn[1] + ynn[3]) / 2
             self.canvas.create_line(x1, y1, x2, y2, fill='red')
+
 
     def _create_line(self, x, y):
         if y != 'terminal':

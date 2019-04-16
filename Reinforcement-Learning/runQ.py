@@ -9,9 +9,11 @@ This script is the environment part of this example. The RL is in RL_brain.py.
 """
 
 import matplotlib
+import pickle
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
-from biggest_maze_env import Maze
+from maze_env import Maze
+# put biggest_maze_env for 40x40 grid
 from QL_brain import QLearningTable
 
 
@@ -19,7 +21,7 @@ def update():
     # training
     total_paths = []
     total_energy = []
-    for episode in range(100):
+    for episode in range(700):
         # initial observation
         current_path = []
         observation = env.reset()
@@ -59,13 +61,10 @@ def update():
 
         # RL choose action based on observation
         action = RL.greedy_action(str(observation))
-        #action = RL.choose_action(str(observation))
 
         # RL take action and get next observation and reward
         observation_, reward, done = env.step(action)
 
-        # RL learn from this transition
-        #RL.learn(str(observation), action, reward, str(observation_))
 
         # swap observation
         final.append(str(observation))
@@ -73,7 +72,6 @@ def update():
         env._create_line(observation, observation_)
 
         observation = observation_
-        #env._save()
 
         # break while loop when end of this episode
         if done:
@@ -81,13 +79,19 @@ def update():
             break
 
     env.destroy()
+
+    filehandler = open("ql_total_path.pkl", 'wb')
+    pickle.dump(total_energy, filehandler)
+    filehandler.close()
+
     x = []
-    for i in range(100):
+    for i in range(700):
         x.append(i)
 
     minlp = []
-    for i in range(100):
+    for i in range(700):
         minlp.append(241)
+    # Please use energy value for MINLP as 345J for 40x40 grid instead of 241J
 
     plt.plot(x, total_energy, 'b')
     plt.plot(x, minlp, 'r')

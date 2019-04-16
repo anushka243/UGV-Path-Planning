@@ -9,9 +9,11 @@ This script is the main run part. The RL is in RL_brain.py.
 """
 
 import matplotlib
+import pickle
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
-from biggest_maze_env import Maze
+from maze_env import Maze
+# put biggest_maze_env for 40x40 grid
 from RL_brain import DeepQNetwork
 
 
@@ -20,7 +22,7 @@ def run_maze():
     step = 0
     total_paths = [] # sum of paths calculated after each training episode
     total_energy = [] # total energy consumption for the complete training
-    for episode in range(300):
+    for episode in range(700):
         # initial observation
         current_path = []
         observation = env.reset_dq()
@@ -70,7 +72,6 @@ def run_maze():
 
         # RL greedy action based on observation
         action = RL.greedy_action(observation)
-        # action = RL.choose_action(str(observation))
 
         # RL take action and get next observation and reward
         observation_, reward, done = env.step_dq(action)
@@ -89,15 +90,19 @@ def run_maze():
 
     env.destroy()
 
+    filehandler = open( "dql_total_path.pkl", 'wb')
+    pickle.dump(total_energy, filehandler)
+    filehandler.close()
+
     # comparsion plot of energy from DQN with MINLP
     x = []
-    for i in range(300):
+    for i in range(700):
         x.append(i)
 
     minlp = []
-    for i in range(300):
+    for i in range(700):
         minlp.append(241)
-
+    # Please use energy value for MINLP as 345J for 40x40 grid instead of 241J
     plt.plot(x, total_energy, 'b')
     plt.plot(x, minlp, 'r')
     plt.xlabel('Number of Epochs')
