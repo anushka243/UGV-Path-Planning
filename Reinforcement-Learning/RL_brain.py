@@ -76,12 +76,17 @@ class DeepQNetwork:
                 w1 = tf.get_variable('w1', [self.n_features, n_l1], initializer=w_initializer, collections=c_names)
                 b1 = tf.get_variable('b1', [1, n_l1], initializer=b_initializer, collections=c_names)
                 l1 = tf.nn.relu(tf.matmul(self.s, w1) + b1)
+            # second layer
+            with tf.variable_scope('l3'):
+                w3 = tf.get_variable('w3', [n_l1, n_l1], initializer=w_initializer, collections=c_names)
+                b3 = tf.get_variable('b3', [1, n_l1], initializer=b_initializer, collections=c_names)
+                l3 = tf.nn.relu(tf.matmul(l1, w3) + b3)
 
-            # second layer. collections is used later when assign to target net
+            # third layer. collections is used later when assign to target net
             with tf.variable_scope('l2'):
                 w2 = tf.get_variable('w2', [n_l1, self.n_actions], initializer=w_initializer, collections=c_names)
                 b2 = tf.get_variable('b2', [1, self.n_actions], initializer=b_initializer, collections=c_names)
-                self.q_eval = tf.matmul(l1, w2) + b2
+                self.q_eval = tf.matmul(l3, w2) + b2
 
         with tf.variable_scope('loss'):
             self.loss = tf.reduce_mean(tf.squared_difference(self.q_target, self.q_eval))
@@ -99,12 +104,17 @@ class DeepQNetwork:
                 w1 = tf.get_variable('w1', [self.n_features, n_l1], initializer=w_initializer, collections=c_names)
                 b1 = tf.get_variable('b1', [1, n_l1], initializer=b_initializer, collections=c_names)
                 l1 = tf.nn.relu(tf.matmul(self.s_, w1) + b1)
+            # second layer
+            with tf.variable_scope('l3'):
+                w3 = tf.get_variable('w3', [n_l1, n_l1], initializer=w_initializer, collections=c_names)
+                b3 = tf.get_variable('b3', [1, n_l1], initializer=b_initializer, collections=c_names)
+                l3 = tf.nn.relu(tf.matmul(l1, w3) + b3)
 
-            # second layer. collections is used later when assign to target net
+            # third layer. collections is used later when assign to target net
             with tf.variable_scope('l2'):
                 w2 = tf.get_variable('w2', [n_l1, self.n_actions], initializer=w_initializer, collections=c_names)
                 b2 = tf.get_variable('b2', [1, self.n_actions], initializer=b_initializer, collections=c_names)
-                self.q_next = tf.matmul(l1, w2) + b2
+                self.q_next = tf.matmul(l3, w2) + b2
 
     def store_transition(self, s, a, r, s_):
         if not hasattr(self, 'memory_counter'):

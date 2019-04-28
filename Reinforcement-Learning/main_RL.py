@@ -1,5 +1,5 @@
 """
-for comparing all the methods. Please run runDQ.py and runQ.py beforehand to save .pkl variables
+For comparing all the methods. Please run runDQ.py and runQ.py beforehand to save .pkl variables
 
 """
 import pickle

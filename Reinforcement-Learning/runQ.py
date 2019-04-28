@@ -1,5 +1,5 @@
 """
-Reinforcement learning maze example.
+Q learning maze example.
 Red rectangle:          explorer.
 Black rectangles:       hells       [reward = 5].
 Yellow bin circle:      paradise    [reward = 10 + x*5 where x is the number of users].
@@ -9,10 +9,9 @@ This script is the environment part of this example. The RL is in RL_brain.py.
 """
 
 import matplotlib
-import pickle
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
-from maze_env import Maze
+from maze_q import Maze
 # put biggest_maze_env for 40x40 grid
 from QL_brain import QLearningTable
 
@@ -39,6 +38,10 @@ def update():
             # RL learn from this transition
             RL.learn(str(observation), action, reward, str(observation_))
 
+            # swap observation
+            #if episode == 20 :
+                #env._create_line(observation, observation_)
+                #env._save()
             current_path.append(str(observation))
             observation = observation_
 
@@ -47,6 +50,7 @@ def update():
                 break
 
         total_paths.append(len(current_path)+1)
+        #total_energy.append((((len(current_path) + 1) * 2) / 2) * (0.29 + 7.4 * 2))
         total_energy.append(((((len(current_path)+1)*2)/2)*(0.29 + 7.4 * 2)) + 1 * env._not_charged())
 
     # end of game
@@ -61,10 +65,13 @@ def update():
 
         # RL choose action based on observation
         action = RL.greedy_action(str(observation))
+        #action = RL.choose_action(str(observation))
 
         # RL take action and get next observation and reward
         observation_, reward, done = env.step(action)
 
+        # RL learn from this transition
+        RL.learn(str(observation), action, reward, str(observation_))
 
         # swap observation
         final.append(str(observation))
@@ -72,18 +79,20 @@ def update():
         env._create_line(observation, observation_)
 
         observation = observation_
+        #env._save()
 
         # break while loop when end of this episode
         if done:
             env._save()
             break
 
+    #print(len(final))
+
+    Energy = (((len(final)+1)*2)/2)*(0.29 + 7.4 * 2)
+    #print(Energy)
+    #print(total_paths)
+    #print(total_energy)
     env.destroy()
-
-    filehandler = open("ql_total_path.pkl", 'wb')
-    pickle.dump(total_energy, filehandler)
-    filehandler.close()
-
     x = []
     for i in range(700):
         x.append(i)
@@ -91,7 +100,6 @@ def update():
     minlp = []
     for i in range(700):
         minlp.append(241)
-    # Please use energy value for MINLP as 345J for 40x40 grid instead of 241J
 
     plt.plot(x, total_energy, 'b')
     plt.plot(x, minlp, 'r')

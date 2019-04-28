@@ -1,5 +1,5 @@
 """
-Reinforcement learning robot path planning for small grid.
+Reinforcement learning robot path planning for small grid. Main DRL file
 
 Red rectangle:          UGV.
 Black rectangles:       IoT regions       [reward = 5].
